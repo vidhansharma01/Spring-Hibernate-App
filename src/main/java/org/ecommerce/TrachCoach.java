@@ -1,8 +1,13 @@
 package org.ecommerce;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class TrachCoach implements Coach{
     private FortuneService fortuneService;
 
+    @Autowired
     public TrachCoach(FortuneService fortuneService){
         this.fortuneService = fortuneService;
     }
